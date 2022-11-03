@@ -40,14 +40,13 @@ if (num==5){
 if (num==6){
     cUrl="contacto.html"
 }
-
   location=cUrl
 }
 
 function calendario_contribuyente(){
-    var anio=1900+new Date().getYear();
-	cUrl="https://sede.agenciatributaria.gob.es/Sede/ayuda/calendario-contribuyente/calendario-contribuyente-"+anio+"-html.html"    
-    abre_ventana(cUrl, "CALENDARIO_CONTRIBUYENTE");
+	var anio=1900+new Date().getYear();	
+	cUrl="https://sede.agenciatributaria.gob.es/Sede/ayuda/calendario-contribuyente/calendario-contribuyente/calendario-anual.html";
+	abre_ventana(cUrl, "CALENDARIO_CONTRIBUYENTE");
 }
 
 function aviso_legal(){
@@ -55,14 +54,11 @@ function aviso_legal(){
     abre_ventana(cUrl, "AVISO_LEGAL");
 }
 
-
 function abre_ventana(cUrl, opciones){
     window.open(cUrl, opciones);
 }
 
 function clientSideInclude(id, url) {
-
-
     var req = false;
     // For Safari, Firefox, and other non-MS browsers
     if (window.XMLHttpRequest) {
