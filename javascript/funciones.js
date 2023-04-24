@@ -45,7 +45,7 @@ if (num==6){
 
 function calendario_contribuyente(){
 	var anio=1900+new Date().getYear();	
-	cUrl="https://sede.agenciatributaria.gob.es/Sede/ayuda/calendario-contribuyente/calendario-contribuyente/calendario-anual.html";
+	cUrl="https://sede.agenciatributaria.gob.es/Sede/ayuda/calendario-contribuyente/calendario-contribuyente-"+anio+"/calendario-anual.html";
 	abre_ventana(cUrl, "CALENDARIO_CONTRIBUYENTE");
 }
 
