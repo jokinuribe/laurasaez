@@ -6,9 +6,11 @@ j(document).ready(function(){
     j("#divFecha2").html(fecha_actual);
     j("#divFecha3").html(fecha_actual);
     clientSideInclude('menu', './menu.html');	
-	ofuscado="e-mail: lau"+"ras"+"aez@la"+"uras"+"aez.com<br>";		
-	document.getElementById("divEmail").innerHTML=ofuscado;
-	
+	ofuscado="e-mail: lau"+"ras"+"aez@la"+"uras"+"aez.com<br>";
+	oDiv = document.getElementById("divEmail");
+    if (oDiv){
+        oDiv.innerHTML=ofuscado;
+    }	
 });
 
 function menu(num){
@@ -45,7 +47,7 @@ if (num==6){
 
 function calendario_contribuyente(){
 	var anio=1900+new Date().getYear();	
-	cUrl="https://sede.agenciatributaria.gob.es/Sede/ayuda/calendario-contribuyente/calendario-contribuyente-"+anio+"/calendario-anual.html";
+	cUrl="https://sede.agenciatributaria.gob.es/Sede/ayuda/calendario-contribuyente/calendario-contribuyente-"+anio+"/calendario-anual.html";	
 	abre_ventana(cUrl, "CALENDARIO_CONTRIBUYENTE");
 }
 
